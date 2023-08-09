@@ -2,16 +2,18 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Standard next steps and commands apply
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+To get sending with integrations working .env.local have to be added
+
+```env
+# Resend integration
+RESEND_API_KEY=
+RESEND_SENDER=
+
+# Nodemailer integration
+NODEMAILER_HOST=
+NODEMAILER_USER=
+NODEMAILER_PASS=
+NODEMAILER_SENDER=
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
