@@ -46,9 +46,18 @@ async function sendNodemailerEmail(to: string) {
   return await nodemailer.sendMail(options);
 }
 
+async function sendToLog(to: string) {
+  console.log(`Sending email to ${to}`);
+  const emailHtml = render(HelloWorldEmail());
+  console.log('----- email ------')
+  console.log(emailHtml);
+  return { success: true };
+}
+
 const senderFunctions: Record<string, (to: string) => Promise<any>> = {
   resend: sendResendEmail,
   nodemailer: sendNodemailerEmail,
+  log: sendToLog,
 }
 
 export async function POST(request: NextRequest) {

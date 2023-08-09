@@ -21,6 +21,7 @@ export default function EmailForm() {
         <input className="bg-slate-200 text-slate-950" type="email" name="emailTo" id="emailTo" value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
       <div className="flex flex-row justify-evenly">
+        <button onClick={() => onSendClick('log')} disabled={!hasValidEmail} className="bg-slate-200 p-3 text-slate-950 rounded">Console.log</button>
         <button onClick={() => onSendClick('resend')} disabled={!hasValidEmail} className="bg-slate-200 p-3 text-slate-950 rounded">Send by Resend</button>
         <button onClick={() => onSendClick('nodemailer')} disabled={!hasValidEmail} className="bg-slate-200 p-3 text-slate-950 rounded">Send by Nodemailer</button>
       </div>

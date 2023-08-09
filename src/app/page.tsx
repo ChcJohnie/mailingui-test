@@ -27,7 +27,7 @@ export default function Home() {
         send emails with Next.js
       </h1>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 w-[600px] max-w-full">
         <span>Send test email located in <code className="font-mono font-bold">src/app/test.tsx</code></span>
         <EmailForm/>
       </div>
