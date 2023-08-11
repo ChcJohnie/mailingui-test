@@ -28,7 +28,7 @@ async function sendResendEmail(to: string) {
       from: resendFrom,
       to,
       subject: "hello world",
-      react: HelloWorldEmail(),
+      react: HelloWorldEmail({farewellMessage: "Goodbye from MailingUI team!"}),
     });
 }
 
